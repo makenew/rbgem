@@ -17,7 +17,8 @@ Bootstrap a new Ruby gem in five minutes or less.
 - [Standard] Ruby style guide, linter, and formatter.
 - Productive and fun testing with [RSpec].
 - Code coverage reporting with [SimpleCov].
-- Continuous testing and gem publishing with [GitHub Actions].
+- Fully automated version management and package publishing with [semantic-release].
+- Continuous checks and tests with [GitHub Actions].
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
 - Badges from [Shields.io].
@@ -32,6 +33,7 @@ Bootstrap a new Ruby gem in five minutes or less.
 [rspec]: https://rspec.info/
 [ruby]: https://www.ruby-lang.org/
 [rubygems.org]: https://rubygems.org/
+[semantic-release]: https://semantic-release.gitbook.io/semantic-release/
 [shields.io]: https://shields.io/
 [simplecov]: https://github.com/simplecov-ruby/simplecov
 [standard]: https://github.com/testdouble/standard
@@ -173,12 +175,30 @@ $ bundle install
 
 ### Publishing
 
-Use [gem release] to release a new version.
+New versions are created with [gem release].
 
-Publishing may be triggered using a [workflow_dispatch on GitHub Actions].
+#### Automatic
+
+New versions are released automatically with [semantic-release]
+as long as commits follow the [Angular Commit Message Conventions].
+
+[Angular Commit Message Conventions]: https://semantic-release.gitbook.io/semantic-release/#commit-message-format
+[semantic-release]: https://semantic-release.gitbook.io/
+
+#### Manual
+
+Publish a new version by triggering a [version workflow_dispatch on GitHub Actions].
+The `version` input will be passed to the `--version` option of `gem bump`.
+
+This may be done on the web or using the [GitHub CLI] with
+
+```
+$ gh workflow run version.yml --raw-field version=<version>
+```
 
 [gem release]: https://github.com/svenfuchs/gem-release
-[workflow_dispatch on github actions]: https://github.com/makenew/rbgem/actions?query=workflow%3Aversion
+[GitHub CLI]: https://cli.github.com/
+[version workflow_dispatch on GitHub Actions]: https://github.com/seamapi/javascript-http/actions?query=workflow%3Aversion
 
 ## GitHub Actions
 
@@ -192,7 +212,7 @@ These must be set manually.
 
 ### Secrets for Optional GitHub Actions
 
-The version and format GitHub actions
+The version, format, generate, and semantic-release GitHub actions
 require a user with write access to the repository.
 Set these additional secrets to enable the action:
 
