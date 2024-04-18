@@ -100,7 +100,7 @@ jobs:
         with:
           files: '*.gem'
       - name: Create main.rb
-        uses: DamianReeves/write-file-action@v1.2
+        uses: DamianReeves/write-file-action@v1.3
         with:
           write-mode: overwrite
           path: main.rb
