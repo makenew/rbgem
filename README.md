@@ -198,7 +198,7 @@ $ gh workflow run version.yml --raw-field version=<version>
 
 [gem release]: https://github.com/svenfuchs/gem-release
 [GitHub CLI]: https://cli.github.com/
-[version workflow_dispatch on GitHub Actions]: https://github.com/seamapi/javascript-http/actions?query=workflow%3Aversion
+[version workflow_dispatch on GitHub Actions]: https://github.com/makenew/rbgem/actions?query=workflow%3Aversion
 
 ## GitHub Actions
 
