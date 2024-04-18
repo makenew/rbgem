@@ -21,18 +21,20 @@ Bootstrap a new Ruby gem in five minutes or less.
 - [Keep a CHANGELOG].
 - Consistent coding with [EditorConfig].
 - Badges from [Shields.io].
+- Start coding instantly with [GitHub Codespaces].
 
 [bundler]: https://bundler.io/
 [editorconfig]: https://editorconfig.org/
+[gem release]: https://github.com/svenfuchs/gem-release
 [github actions]: https://github.com/features/actions
+[github codespaces]: https://github.com/features/codespaces
 [keep a changelog]: https://keepachangelog.com/
 [rspec]: https://rspec.info/
-[rubygems.org]: https://rubygems.org/
 [ruby]: https://www.ruby-lang.org/
+[rubygems.org]: https://rubygems.org/
 [shields.io]: https://shields.io/
 [simplecov]: https://github.com/simplecov-ruby/simplecov
 [standard]: https://github.com/testdouble/standard
-[gem release]: https://github.com/svenfuchs/gem-release
 
 ### Bootstrapping a new project
 
