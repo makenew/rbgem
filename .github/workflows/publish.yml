@@ -52,7 +52,7 @@ jobs:
       registry_key: rubygems
       registry_host: https://rubygems.org
     secrets:
-       registry_credentials: ${{ secrets.RUBYGEMS_API_KEY }}
+      registry_credentials: ${{ secrets.RUBYGEMS_API_KEY }}
   github:
     name: GitHub Packages
     uses: ./.github/workflows/_publish.yml
@@ -64,4 +64,4 @@ jobs:
       registry_key: github
       registry_host: https://rubygems.pkg.github.com/${{ github.repository_owner }}
     secrets:
-       registry_credentials: Bearer ${{ secrets.GITHUB_TOKEN }}
+      registry_credentials: Bearer ${{ secrets.GITHUB_TOKEN }}
